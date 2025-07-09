@@ -1,0 +1,16 @@
+package mx.com.santander.hexagonalmodularmaven.cliente.model.dto;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@AllArgsConstructor
+@Getter
+@Setter
+public class ClienteDTO {
+    private Long id;
+    private String nombre;
+    private String apellido;
+    private String email;
+    private String direccion;
+    private String telefono;
+}
