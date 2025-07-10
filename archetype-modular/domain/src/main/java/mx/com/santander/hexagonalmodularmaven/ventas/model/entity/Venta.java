@@ -16,7 +16,8 @@ public class Venta {
     private FechaCompra fechaCompra;
 
     public Venta (Long idCliente ,int cantidadProductos , List<ProductoVentaCommand> productosComprados, int precioTotal , LocalDateTime fechaCompra) {
-
+        
+        this.idCliente = new VentaIdCliente(idCliente);
         this.cantidadProductos = new CantidadProductos(cantidadProductos);
         this.productosComprados = new ProductosComprados(productosComprados);
         this.precioTotal = new PrecioTotal(precioTotal);
