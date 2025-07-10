@@ -10,7 +10,6 @@ public class VentaByIdClienteService {
     private VentaDAO ventaDAO;
 
     public List<Venta> findVentaByClient(Long id){
-        return ventaDAO.getByClienteId(id);
-        
+        return ventaDAO.getByClienteId(id);   
     }
 }
