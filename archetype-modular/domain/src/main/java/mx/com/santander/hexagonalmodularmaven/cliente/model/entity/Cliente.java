@@ -1,6 +1,6 @@
 package mx.com.santander.hexagonalmodularmaven.cliente.model.entity;
-
 import mx.com.santander.hexagonalmodularmaven.cliente.model.dto.command.ClienteCreateCommand;
+
 
 public class Cliente {
     private ClienteId id;
