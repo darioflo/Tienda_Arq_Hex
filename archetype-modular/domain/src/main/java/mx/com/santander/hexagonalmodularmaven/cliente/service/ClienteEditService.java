@@ -15,7 +15,7 @@ public class ClienteEditService {
 
     public Cliente editCLient(ClienteEditCommand cliente){
 
-        Cliente existente = clienteDAO.getById(cliente.getId());
+        Cliente existente = clienteDAO.findById(cliente.getId());
 
         if (existente == null) {
             throw new IllegalArgumentException(ClienteConstant.CLIENT_NOT_FOUND);

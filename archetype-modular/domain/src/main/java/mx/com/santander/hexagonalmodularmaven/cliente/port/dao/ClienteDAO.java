@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface ClienteDAO {
     
-    Cliente getById (Long id);
+    Cliente findById (Long id);
     List<Cliente> getAll();
     boolean existEmail(String email);
 }

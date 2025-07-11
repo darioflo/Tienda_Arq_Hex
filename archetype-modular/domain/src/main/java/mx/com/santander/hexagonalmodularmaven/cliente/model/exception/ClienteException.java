@@ -1,14 +1,16 @@
 package mx.com.santander.hexagonalmodularmaven.cliente.model.exception;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 
-@AllArgsConstructor
-@Getter
-@Setter
 
-public class ClienteException {
- 
-    private String errorMessage;
+public class ClienteException extends RuntimeException {
 
+    private final String errorMessage;
+
+    public ClienteException(String errorMessage) {
+        super(errorMessage);
+        this.errorMessage = errorMessage;
+    }
+
+    public String getErrorMessage() {
+        return errorMessage;
+    }
 }

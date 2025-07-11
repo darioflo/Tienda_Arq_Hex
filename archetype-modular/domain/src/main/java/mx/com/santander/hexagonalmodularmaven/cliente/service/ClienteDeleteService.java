@@ -12,7 +12,7 @@ public class ClienteDeleteService {
 
 
     public void deleteClient(Long id){
-        if (clienteDAO.getById(id) == null) {
+        if (clienteDAO.findById(id) == null) {
             throw new IllegalArgumentException(ClienteConstant.CLIENT_NOT_FOUND);
         }
 

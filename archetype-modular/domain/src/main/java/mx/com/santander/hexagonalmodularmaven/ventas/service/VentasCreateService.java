@@ -19,7 +19,7 @@ public class VentasCreateService {
 
     public Venta createVenta(VentaCreateCommand venta){
         
-        if (clienteDAO.getById(venta.getIdCliente())== null) {
+        if (clienteDAO.findById(venta.getIdCliente())== null) {
             throw new IllegalArgumentException(VentasConstant.CLIENT_NOT_FOUND);
         }
 

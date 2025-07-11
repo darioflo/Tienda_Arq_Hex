@@ -11,7 +11,7 @@ public class ClienteFindService {
 
     public Cliente findClient(Long id){
 
-        Cliente cliente = clienteDao.getById(id);
+        Cliente cliente = clienteDao.findById(id);
 
         if (cliente == null) {
             throw new IllegalArgumentException(ClienteConstant.CLIENT_NOT_FOUND);
