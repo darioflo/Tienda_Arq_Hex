@@ -2,6 +2,7 @@ package mx.com.santander.hexagonalmodularmaven.ventas.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.AllArgsConstructor;
 import mx.com.santander.hexagonalmodularmaven.cliente.port.dao.ClienteDAO;
 import mx.com.santander.hexagonalmodularmaven.producto.model.entity.Producto;
 import mx.com.santander.hexagonalmodularmaven.producto.port.dao.ProductoDAO;
@@ -11,11 +12,12 @@ import mx.com.santander.hexagonalmodularmaven.ventas.model.dto.command.VentaCrea
 import mx.com.santander.hexagonalmodularmaven.ventas.model.entity.Venta;
 import mx.com.santander.hexagonalmodularmaven.ventas.port.repository.VentaRepository;
 
+@AllArgsConstructor
 public class VentasCreateService {
     
-    private ClienteDAO clienteDAO;
-    private ProductoDAO productoDAO;    
-    private VentaRepository ventaRepository;
+    private final ClienteDAO clienteDAO ;
+    private final ProductoDAO productoDAO;    
+    private final VentaRepository ventaRepository;
 
     public Venta createVenta(VentaCreateCommand venta){
         

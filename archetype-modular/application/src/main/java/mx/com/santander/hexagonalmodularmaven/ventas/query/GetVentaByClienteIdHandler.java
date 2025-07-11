@@ -17,7 +17,7 @@ public class GetVentaByClienteIdHandler {
     private final VentaByIdClienteService ventaByIdClienteService;
     private final VentaDtoMapper ventaDtoMapper;
 
-    public List<VentaDTO> execute(Long idCliente) {
+    public List<VentaDTO> handler(Long idCliente) {
         var ventas = ventaByIdClienteService.findVentaByClient(idCliente);
         return ventas.stream()
                      .map(ventaDtoMapper::toDto)

@@ -40,11 +40,11 @@ public class ProductoDaoAdapter implements ProductoDAO{
 
     @Override
     public List<Producto> getAll() {
-        productoSpringJpa.findAll()
+        return productoSpringJpa.findAll()
             .stream()
             .map(productoEntityMapper::toDomain)
             .collect(Collectors.toList());
-        return null;
+    
     }
 
 }

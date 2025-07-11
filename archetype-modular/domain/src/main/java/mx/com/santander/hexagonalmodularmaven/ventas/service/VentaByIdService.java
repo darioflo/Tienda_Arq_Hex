@@ -1,12 +1,13 @@
 package mx.com.santander.hexagonalmodularmaven.ventas.service;
 
+import lombok.AllArgsConstructor;
 import mx.com.santander.hexagonalmodularmaven.ventas.model.constant.VentasConstant;
 import mx.com.santander.hexagonalmodularmaven.ventas.model.entity.Venta;
 import mx.com.santander.hexagonalmodularmaven.ventas.port.dao.VentaDAO;
-
+@AllArgsConstructor
 public class VentaByIdService {
     
-    private VentaDAO ventaDAO;
+    private final VentaDAO ventaDAO;
 
     public Venta findVentaId(Long id){
         
