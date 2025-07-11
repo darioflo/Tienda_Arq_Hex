@@ -1,11 +1,13 @@
 package mx.com.santander.hexagonalmodularmaven.producto.model.exception;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
 
-@AllArgsConstructor
+import lombok.Getter;
+
 @Getter
-@Setter
-public class ProductoException {
-    private String errorMessage;
+public class ProductoException extends RuntimeException {
+    private final String errorMessage;
+
+    public ProductoException(String errorMessage) {
+        super(errorMessage);
+        this.errorMessage = errorMessage;
+    }
 }

@@ -1,15 +1,17 @@
 package mx.com.santander.hexagonalmodularmaven.producto.service;
 
+import lombok.RequiredArgsConstructor;
 import mx.com.santander.hexagonalmodularmaven.producto.model.constant.ProductoConstant;
 import mx.com.santander.hexagonalmodularmaven.producto.model.dto.command.ProductoEditCommand;
 import mx.com.santander.hexagonalmodularmaven.producto.model.entity.Producto;
 import mx.com.santander.hexagonalmodularmaven.producto.port.dao.ProductoDAO;
 import mx.com.santander.hexagonalmodularmaven.producto.port.repository.ProductoRepository;
 
+@RequiredArgsConstructor
 public class ProductoEditService {
     
-    private ProductoRepository productoRepository;
-    private ProductoDAO productoDAO;
+    private final ProductoRepository productoRepository;
+    private final ProductoDAO productoDAO;
 
     public Producto editProduct(ProductoEditCommand producto){
 
@@ -26,7 +28,7 @@ public class ProductoEditService {
             existente.getStock()
         );
 
-        productoRepository.updateClient(editado);
+        productoRepository.updateProduct(editado);
         return editado;
     }
 }

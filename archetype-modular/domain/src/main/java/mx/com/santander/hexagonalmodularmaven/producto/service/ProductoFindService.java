@@ -1,11 +1,13 @@
 package mx.com.santander.hexagonalmodularmaven.producto.service;
+import lombok.RequiredArgsConstructor;
 import mx.com.santander.hexagonalmodularmaven.producto.model.constant.ProductoConstant;
 import mx.com.santander.hexagonalmodularmaven.producto.model.entity.Producto;
 import mx.com.santander.hexagonalmodularmaven.producto.port.dao.ProductoDAO;
 
+@RequiredArgsConstructor
 public class ProductoFindService {
     
-    private ProductoDAO productoDAO;
+    private final ProductoDAO productoDAO;
 
     public Producto findProducto(Long id){
         
