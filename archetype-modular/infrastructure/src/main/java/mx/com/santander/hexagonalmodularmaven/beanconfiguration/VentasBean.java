@@ -1,5 +1,4 @@
 package mx.com.santander.hexagonalmodularmaven.beanconfiguration;
-
 import mx.com.santander.hexagonalmodularmaven.cliente.port.dao.ClienteDAO;
 import mx.com.santander.hexagonalmodularmaven.producto.port.dao.ProductoDAO;
 import mx.com.santander.hexagonalmodularmaven.ventas.port.dao.VentaDAO;

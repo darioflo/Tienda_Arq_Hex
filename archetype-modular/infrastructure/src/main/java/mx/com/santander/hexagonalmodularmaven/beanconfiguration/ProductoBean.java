@@ -1,5 +1,4 @@
 package mx.com.santander.hexagonalmodularmaven.beanconfiguration;
-
 import mx.com.santander.hexagonalmodularmaven.producto.port.dao.ProductoDAO;
 import mx.com.santander.hexagonalmodularmaven.producto.port.repository.ProductoRepository;
 import mx.com.santander.hexagonalmodularmaven.producto.service.ProductoCreateService;
