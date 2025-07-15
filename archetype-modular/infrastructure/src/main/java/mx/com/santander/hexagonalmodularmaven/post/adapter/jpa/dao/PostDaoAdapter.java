@@ -3,7 +3,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import lombok.AllArgsConstructor;
-import mx.com.santander.hexagonalmodularmaven.post.model.dto.PostDTO;
+import mx.com.santander.hexagonalmodularmaven.post.model.entity.Post;
 import mx.com.santander.hexagonalmodularmaven.post.port.dao.PostDAO;
 
 @Repository
@@ -12,8 +12,8 @@ public class PostDaoAdapter implements PostDAO {
 
 
     @Override
-    public List<PostDTO> obtenerPosts() {
-        String url = "https://jsonplaceholder.typicode.com/posts";
+    public List<Post> obtenerPosts() {
+      
         return null;
     }
 }
