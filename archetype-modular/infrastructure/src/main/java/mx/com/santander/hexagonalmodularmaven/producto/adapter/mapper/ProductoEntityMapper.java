@@ -1,12 +1,10 @@
 package mx.com.santander.hexagonalmodularmaven.producto.adapter.mapper;
-
 import mx.com.santander.hexagonalmodularmaven.producto.adapter.entity.ProductoEntity;
 import mx.com.santander.hexagonalmodularmaven.producto.model.entity.Producto;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ProductoEntityMapper {
-
     public Producto toDomain(ProductoEntity entity) {
         return new Producto(
                 entity.getId(),
@@ -17,11 +15,11 @@ public class ProductoEntityMapper {
     }
 
     public ProductoEntity toEntity(Producto producto) {
-        return new ProductoEntity(
-                producto.getId(),
-                producto.getNombre(),
-                producto.getPrecio(),
-                producto.getStock()
-        );
+        
+        ProductoEntity nuevoProducto = new ProductoEntity();
+        nuevoProducto.setNombre(producto.getNombre());
+        nuevoProducto.setPrecio(producto.getPrecio());
+        nuevoProducto.setStock(producto.getStock());
+        return nuevoProducto;
     }
 }

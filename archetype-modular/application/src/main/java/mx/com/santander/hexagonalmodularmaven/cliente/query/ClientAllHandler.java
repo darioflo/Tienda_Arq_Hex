@@ -13,8 +13,8 @@ import mx.com.santander.hexagonalmodularmaven.cliente.service.ClienteFindAllServ
 @AllArgsConstructor
 public class ClientAllHandler {
     
-    private ClienteFindAllService clienteService;
-    private ClienteDtoMapper clienteDtoMapper;
+    private final ClienteFindAllService clienteService;
+    private final ClienteDtoMapper clienteDtoMapper;
 
     public List<ClienteDTO> handler(){
         return clienteService.findAllClients()

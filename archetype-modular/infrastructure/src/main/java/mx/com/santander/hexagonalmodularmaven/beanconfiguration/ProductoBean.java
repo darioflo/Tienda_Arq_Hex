@@ -12,9 +12,8 @@ import org.springframework.context.annotation.Configuration;
 public class ProductoBean {
 
     @Bean
-    public ProductoCreateService productoCreateService(ProductoRepository productoRepository,
-                                                       ProductoDAO productoDAO) {
-        return new ProductoCreateService(productoRepository, productoDAO);
+    public ProductoCreateService productoCreateService(ProductoRepository productoRepository) {
+        return new ProductoCreateService(productoRepository);
     }
 
     @Bean

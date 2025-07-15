@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-
 public class ClienteDireccion {
     private String direccion;
 }

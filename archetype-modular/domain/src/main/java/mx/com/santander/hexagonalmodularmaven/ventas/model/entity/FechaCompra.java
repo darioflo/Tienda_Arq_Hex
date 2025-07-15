@@ -7,7 +7,6 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-
 public class FechaCompra {
     private LocalDateTime fechaCompra;
 }

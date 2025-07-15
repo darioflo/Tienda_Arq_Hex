@@ -24,9 +24,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 @AllArgsConstructor
 public class ProductoCommandController {
     
-    private CreateProductHandler createProductHandler;
-    private EditProductHandler editProductHandler;
-    private DeleteProductHandler deleteProductHandler;
+    private final CreateProductHandler createProductHandler;
+    private final EditProductHandler editProductHandler;
+    private final DeleteProductHandler deleteProductHandler;
 
     @PostMapping("")
     public ResponseEntity<ProductoDTO> crearProducto(@RequestBody ProductoCreateCommand producto) {

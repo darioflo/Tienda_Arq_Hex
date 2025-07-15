@@ -9,9 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-
 public class VentaDTO {
-    
     private Long idCliente;
     private List<ProductoVentaCommand> productosComprados;
     private int cantidadProductos;

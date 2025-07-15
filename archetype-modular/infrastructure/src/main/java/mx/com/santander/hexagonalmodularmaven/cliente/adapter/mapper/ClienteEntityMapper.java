@@ -21,7 +21,7 @@ public class ClienteEntityMapper {
 
     public ClienteEntity toEntity(Cliente cliente){
         ClienteEntity entidad = new ClienteEntity();
-        entidad.setId(cliente.getId());
+        //entidad.setId(cliente.getId());
         entidad.setNombre(cliente.getNombre());
         entidad.setApellido(cliente.getApellido());
         entidad.setEmail(cliente.getEmail());

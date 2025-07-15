@@ -3,6 +3,7 @@ package mx.com.santander.hexagonalmodularmaven.ventas.adapter.mapper;
 import mx.com.santander.hexagonalmodularmaven.ventas.adapter.entity.ProductoCompradoEntity;
 import mx.com.santander.hexagonalmodularmaven.ventas.adapter.entity.VentaEntity;
 import mx.com.santander.hexagonalmodularmaven.ventas.model.dto.command.ProductoVentaCommand;
+import mx.com.santander.hexagonalmodularmaven.ventas.model.entity.ProductosComprados;
 import mx.com.santander.hexagonalmodularmaven.ventas.model.entity.Venta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,7 +19,6 @@ public class VentaEntityMapper {
 
     public VentaEntity toEntity(Venta venta) {
         VentaEntity entity = new VentaEntity();
-        entity.setId(venta.getIdVenta());
         entity.setIdCliente(venta.getIdCliente());
         entity.setCantidadProductos(venta.getCantidadProductos());
         entity.setPrecioTotal(venta.getPrecioTotal());
@@ -50,7 +50,7 @@ public class VentaEntityMapper {
             venta = new Venta(
                 entity.getIdCliente(),
                 entity.getCantidadProductos(),
-                productos,
+                new ProductosComprados(productos),
                 entity.getPrecioTotal(),
                 entity.getFechaCompra()
             );

@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequiredArgsConstructor
 public class ClienteQueryController {
 
-    private ClientAllHandler clientAllHandler;
-    private ClientByIdHandler clientByIdHandler;
+    private final ClientAllHandler clientAllHandler;
+    private final ClientByIdHandler clientByIdHandler;
 
     @GetMapping("/{id}")
     public ResponseEntity<ClienteDTO> obtenerPorId(@PathVariable Long id) {

@@ -9,6 +9,7 @@ import mx.com.santander.hexagonalmodularmaven.producto.port.dao.ProductoDAO;
 import mx.com.santander.hexagonalmodularmaven.ventas.model.constant.VentasConstant;
 import mx.com.santander.hexagonalmodularmaven.ventas.model.dto.command.ProductoVentaCommand;
 import mx.com.santander.hexagonalmodularmaven.ventas.model.dto.command.VentaCreateCommand;
+import mx.com.santander.hexagonalmodularmaven.ventas.model.entity.ProductosComprados;
 import mx.com.santander.hexagonalmodularmaven.ventas.model.entity.Venta;
 import mx.com.santander.hexagonalmodularmaven.ventas.port.repository.VentaRepository;
 
@@ -48,8 +49,7 @@ public class VentasCreateService {
                 ));
             }
 
-            precioUnitario = producto.getPrecio();
-            precioTotal += precioUnitario * venta.getCantidadProductos();
+            precioTotal += producto.getPrecio() * venta.getCantidadProductos();
 
             productos.add(new ProductoVentaCommand(
                 producto.getProductoId(),
@@ -60,8 +60,13 @@ public class VentasCreateService {
                 ));
 
         }
-            Venta ventaNueva = new Venta();
-            Venta ventaGuardada = ventaNueva.createVenta(venta);
+            Venta ventaGuardada = new Venta(
+                venta.getIdCliente(),
+                productos.size(), 
+                new ProductosComprados(productos),
+                (int) precioTotal,
+                venta.getFechaCompra()
+            );
 
         ventaRepository.createVenta(ventaGuardada);
 

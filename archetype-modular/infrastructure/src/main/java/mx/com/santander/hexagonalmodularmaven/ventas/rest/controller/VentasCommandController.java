@@ -3,6 +3,7 @@ package mx.com.santander.hexagonalmodularmaven.ventas.rest.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.AllArgsConstructor;
 import mx.com.santander.hexagonalmodularmaven.ventas.command.CreateVentaHandler;
 import mx.com.santander.hexagonalmodularmaven.ventas.model.dto.VentaDTO;
 import mx.com.santander.hexagonalmodularmaven.ventas.model.dto.command.VentaCreateCommand;
@@ -14,9 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/ventas")
+@AllArgsConstructor
 public class VentasCommandController {
     
-        private CreateVentaHandler createVentaHandler;
+        private final CreateVentaHandler createVentaHandler;
 
         @PostMapping("")
         public ResponseEntity<VentaDTO> crearVenta(@RequestBody VentaCreateCommand venta) {

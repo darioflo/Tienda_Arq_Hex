@@ -1,13 +1,15 @@
 package mx.com.santander.hexagonalmodularmaven.producto.model.dto.command;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class ProductoCreateCommand {
     private String nombre;
-    private double precio;
-    private int stock;
+    private Double precio;
+    private Integer stock;
 }

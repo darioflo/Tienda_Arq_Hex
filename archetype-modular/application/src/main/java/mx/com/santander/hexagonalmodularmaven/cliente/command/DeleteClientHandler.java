@@ -9,7 +9,7 @@ import mx.com.santander.hexagonalmodularmaven.cliente.service.ClienteDeleteServi
 
 public class DeleteClientHandler {
     
-    private ClienteDeleteService clienteDeleteService;
+    private final ClienteDeleteService clienteDeleteService;
 
     public void handler(Long id){
         clienteDeleteService.deleteClient(id);

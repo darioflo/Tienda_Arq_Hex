@@ -10,8 +10,6 @@ public class Cliente {
     private ClienteDireccion direccion;
     private ClienteTelefono telefono;
 
-
-
     public Cliente (Long id, String nombre, String apellido, String email, String direccion, String telefono){
         this.id = new ClienteId(id);
         this.nombre = new ClienteNombre(nombre);

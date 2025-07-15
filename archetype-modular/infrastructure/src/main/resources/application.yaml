@@ -1,9 +1,12 @@
 spring:
     datasource:
-        username: postgres
-        url: jdbc:postgresql://localhost:5432/user-task
-        password: secret
-    h2:
+        #username: postgres
+        #url: jdbc:postgresql://localhost:5432/user-task
+        #password: secret
+        driverClassName: org.h2.Driver
+        username: sa
+        password:
+        h2:
         console:
             enabled: true
             settings:
@@ -12,23 +15,14 @@ spring:
             path: /h2-console
             allowed-origins: "*"
     jpa:
-        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        #database-platform: org.hibernate.dialect.PostgreSQLDialect
+        database-platform: org.hibernate.dialect.H2Dialect
         hibernate:
             ddl-auto: create-drop
         show-sql: true
-    sql:
-        init:
-            platform: postgres
-    data:
-        redis:
-        database: 0
-        host: localhost
-        port: 6379
-        password:
-        timeout: 60000
-        mongodb:
-            database: example
-            uri: mongodb://root:example@localhost:27017/admin?connectTimeoutMS=10000&authSource=admin
+    #sql:
+        #init:
+            #platform: postgres
 feign:
     name: jplaceholder
     base-url: "https://jsonplaceholder.typicode.com"
@@ -39,17 +33,4 @@ server:
         context-path: /example
         session:
             timeout: 21600s
-
-    kafka:
-        consumer:
-            bootstrap-servers: localhost:9092
-            group-id: my-consumer-group
-            auto-offset-reset: earliest
-            properties:
-                key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
-                value.deserializer: org.apache.kafka.common.serialization.StringDeserializer
-        producer:
-            bootstrap-servers: localhost:9092
-            properties:
-                key.serializer: org.apache.kafka.common.serialization.StringSerializer
-                value.serializer: org.apache.kafka.common.serialization.StringSerializer
+   

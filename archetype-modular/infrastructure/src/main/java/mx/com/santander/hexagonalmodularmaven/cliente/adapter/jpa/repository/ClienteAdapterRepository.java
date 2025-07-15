@@ -12,8 +12,8 @@ import mx.com.santander.hexagonalmodularmaven.cliente.port.repository.ClienteRep
 @RequiredArgsConstructor
 public class ClienteAdapterRepository implements ClienteRepository{
     
-    private ClienteEntityMapper clienteEntityMapper;
-    private ClienteSpringJpaAdapterRepository clienteSpringJpa;
+    private final ClienteEntityMapper clienteEntityMapper;
+    private final ClienteSpringJpaAdapterRepository clienteSpringJpa;
 
     @Override
     public Cliente createClient(Cliente cliente){

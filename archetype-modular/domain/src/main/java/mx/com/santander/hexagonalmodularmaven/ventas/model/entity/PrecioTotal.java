@@ -5,7 +5,6 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-
 public class PrecioTotal {
     private int precioTotal;
 }

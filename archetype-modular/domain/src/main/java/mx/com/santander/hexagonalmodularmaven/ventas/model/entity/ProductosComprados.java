@@ -8,7 +8,6 @@ import mx.com.santander.hexagonalmodularmaven.ventas.model.dto.command.ProductoV
 
 @AllArgsConstructor
 @Getter
-
 public class ProductosComprados {
     private List<ProductoVentaCommand> productosComprados;
 }

@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 @Repository
 public interface ProductoSpringJpaAdapterRepository extends JpaRepository<ProductoEntity,Long> {
     
-    ProductoEntity findProductByName(String name);
+    ProductoEntity findProductByNombre(String nombre);
 }

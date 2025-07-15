@@ -12,8 +12,8 @@ import mx.com.santander.hexagonalmodularmaven.cliente.service.ClienteCreateServi
 @AllArgsConstructor
 public class CreateClientHandler {
     
-    private ClienteCreateService clienteCreateService;
-    private ClienteDtoMapper clienteDtoMapper;
+    private final ClienteCreateService clienteCreateService;
+    private final ClienteDtoMapper clienteDtoMapper;
 
     public ClienteDTO handler(ClienteCreateCommand cliente){
         Cliente clienteCreado = clienteCreateService.createClient(cliente);

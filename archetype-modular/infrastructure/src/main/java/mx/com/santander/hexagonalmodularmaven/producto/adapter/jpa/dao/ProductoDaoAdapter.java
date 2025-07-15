@@ -30,7 +30,7 @@ public class ProductoDaoAdapter implements ProductoDAO{
 
     @Override
     public Producto getProductByName(String name) {
-        var producto = productoSpringJpa.findProductByName(name);
+        var producto = productoSpringJpa.findProductByNombre(name);
         if (producto == null) {
             throw new IllegalArgumentException(ProductoConstant.PRODUCT_NOT_FOUND);
         }

@@ -12,8 +12,8 @@ import mx.com.santander.hexagonalmodularmaven.cliente.service.ClienteEditService
 @AllArgsConstructor
 public class EditClientHandler {
     
-    private ClienteEditService clienteEditService;
-    private ClienteDtoMapper clienteDtoMapper;
+    private final ClienteEditService clienteEditService;
+    private final ClienteDtoMapper clienteDtoMapper;
 
 
     public ClienteDTO handler(ClienteEditCommand cliente){

@@ -11,8 +11,8 @@ import mx.com.santander.hexagonalmodularmaven.producto.port.repository.ProductoR
 @RequiredArgsConstructor
 public class ProductoAdapterRepository implements ProductoRepository {
     
-    private ProductoSpringJpaAdapterRepository productoSpringJpa;
-    private ProductoEntityMapper productoEntityMapper;
+    private final ProductoSpringJpaAdapterRepository productoSpringJpa;
+    private final ProductoEntityMapper productoEntityMapper;
 
     @Override
     public Producto createProduct(Producto producto) {

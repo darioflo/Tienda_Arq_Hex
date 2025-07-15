@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 @AllArgsConstructor
 public class ProductoQueryController {
     
-    private ProductByIdHandler productByIdHandler;
-    private ProductAllHandler productAllHandler;
+    private final ProductByIdHandler productByIdHandler;
+    private final ProductAllHandler productAllHandler;
 
 
     @GetMapping("")

@@ -11,8 +11,8 @@ import mx.com.santander.hexagonalmodularmaven.ventas.service.VentaByIdService;
 @AllArgsConstructor
 public class VentaByIdHandler {
     
-    private VentaByIdService ventaByIdService;
-    private VentaDtoMapper ventaDtoMapper;
+    private final VentaByIdService ventaByIdService;
+    private final VentaDtoMapper ventaDtoMapper;
 
     public VentaDTO handler(Long id){
         
