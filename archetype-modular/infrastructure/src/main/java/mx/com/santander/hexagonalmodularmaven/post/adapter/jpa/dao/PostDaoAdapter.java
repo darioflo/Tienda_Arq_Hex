@@ -14,7 +14,6 @@ public class PostDaoAdapter implements PostDAO {
     @Override
     public List<PostDTO> obtenerPosts() {
         String url = "https://jsonplaceholder.typicode.com/posts";
-        
         return null;
     }
 }
